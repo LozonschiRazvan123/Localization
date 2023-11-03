@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
+using System.Globalization;
 
 namespace Localization.Controllers
 {
@@ -19,6 +20,7 @@ namespace Localization.Controllers
         [HttpGet]
         public string Get()
         {
+            var f = Thread.CurrentThread.CurrentCulture;
             //var language = Request.Headers["Accept-Language"].ToString();
             var value = _stringLocalizer["ProductNotFound"].Value;
             return value;

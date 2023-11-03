@@ -7,20 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <EmbeddedResource Remove="Resources\Localize.Resource.fr.resx" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Resources\Localize.Resource.fr.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Resources\Localize.Resource.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Resources\Localize.Resource.en-US.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
     </EmbeddedResource>
